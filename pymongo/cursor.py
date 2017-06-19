@@ -261,7 +261,7 @@ class Cursor(object):
     def _clone_base(self):
         """Creates an empty Cursor object for information to be copied into.
         """
-        return Cursor(self.__collection)
+        return self.__class__(self.__collection)
 
     def __die(self, synchronous=False):
         """Closes this cursor.
